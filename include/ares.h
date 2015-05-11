@@ -19,8 +19,6 @@
 #define ARES__H
 
 #include "ares_version.h"  /* c-ares version defines   */
-#include "ares_build.h"    /* c-ares build definitions */
-#include "ares_rules.h"    /* c-ares rules enforcement */
 
 /*
  * Define WIN32 when build target is Win32 API
@@ -30,6 +28,9 @@
    !defined(WIN32) && !defined(__SYMBIAN32__)
 #  define WIN32
 #endif
+
+/* Data type definition of ares_socklen_t. */
+typedef unsigned ares_socklen_t;
 
 #include <sys/types.h>
 
